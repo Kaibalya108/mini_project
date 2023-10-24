@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="passwordManager.css">
+    <title>My Personal Password Manager</title>
+</head>
+
+<body>
+    <nav>
+        <div id="logo"><b>My Password Manager</b></div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1><b>Password Manager</b></h1>
+        <b><i>🔒Your security, our Priority<br></i></b>
+        <p>We're thrilled to have you here,Whether you're here to create, update, or access your passwords, you're in
+            the right place. We've got you covered with robust encryption, user-friendly features, and a seamless
+            experience.</p>
+        <h2>Your Passwords</h2>
+        <!-- <p class="alert">Password copied to clipboard </p> -->
+       <d class="wrapper">
+        <table>
+            <tr>
+                <th>Websites</th>
+                <th>Username</th>
+                <th>password</th>
+                <th>Delete</th>
+
+            </tr>
+            <tr>
+                <td>facebook.com</td>
+                <td>Kaibalya N. Routray</td>
+                <td>Kaibalya N. Routray</td>
+                <td>Kaibalya N. Routray</td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td>kaibalya_roy</td>
+                <td>Kaibalya N. Routray</td>
+                <td>Kaibalya N. Routray</td>
+            </tr>
+        </table>
+    
+        <h2>Add a Password</h2>
+        <form action="/submit" method="post">
+            <label for="website"><b>Website: </b> </label>
+            <input type="text" id="website" name="website" placeholder="website" required><br><br>
+            <label for="username"><b>Username: </b> </label>
+            <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+            <label for="password"><b>Password: </b></label>
+            <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+            <button class="btn"><b>Submit</b></button>
+        </form>
+    </div>
+</div>
+  
+    <script src="pwd.js"> </script>
+    <footer>
+        <p>Author: Kaibalaya Nrayan Routray<br>
+        <a href="kaibalyaroutray21@gmail.com">kaibalyaroutray21@gmail.com</a></p>
+        <p>©All Rights Reserved</p>
+        <ul class="foot">
+            <a href="https://www.instagram.com/kaibalya_roy/"<li><i class="fa-brands fa-square-instagram" style="color: #ffffff;"></i></li></a>
+           <a href ="https://www.linkedin.com/in/kaibalya-n-routray-8a5180259/"> <li><i class="fa-brands fa-linkedin" style="color: #fcfcfc;"></i></li></a>
+            <li><i class="fa-brands fa-square-x-twitter" style="color: #ffffff;"></i></li>
+        </ul>
+      </footer>
+      
+</body>
+
+</html>
