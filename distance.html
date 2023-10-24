@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <title>Distance</title>
+    <style>
+        body 
+        {
+            font-family: Arial, sans-serif;
+        }
+        nav
+        {
+            top: 0;
+            background-color: rgb(11, 125, 255);
+            height: 15vh;
+            display: flex;
+            justify-content: space-between; /* Distribute space between icon and text */
+            align-items: center;
+            padding: 0 20px; /* Add some padding for spacing */
+        }
+        h3 
+        {
+            font-size: 35px;
+            color: white;
+        }
+        .icon-container
+        {
+            display: flex;
+            align-items: center;
+        }
+        .text-container
+        {
+            display: flex;
+            align-items: center;
+        }
+        .centered-text 
+        {
+            font-size: 35px;
+            color: white;
+        }
+        .maindiv 
+        {
+            height: 400px;
+            width: 390px;
+            background-color: white;
+            margin-left: 620px;
+            margin-top: 130px;
+            box-shadow: 5px 5px 5px 5px black;
+            
+        }
+        .footer 
+        {
+            margin-top: 60px;
+            background-color: rgb(11, 125, 255);
+            height: 75px;
+        }
+        h5 
+        {
+            padding-top: 20px;
+            color: white;
+            font-size: 20px;
+        }
+       
+        #icon 
+        {
+            padding-left: 10px;
+            padding-top: 25px;
+            font-size: 25px;
+            color: white;
+        }
+        #btn 
+        {
+            
+            border-radius: 25px;
+            background-color: #1598c7;
+            color: white;
+            font-size: 16px;
+        }
+        #container 
+        {
+            padding-left: 8px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+       
+        
+        <div align="center">
+            <h3>Distance Converter</h3>
+        </div>
+        <a href="front.html"><i class="fa-solid fa-house-chimney" id="icon"></i></a>
+    </nav>
+    <div class="maindiv">
+        <div id="container">
+         <p style="font-size: 35px;font-weight:400;">Distance Converter</p><br>
+         <label for="distance" style="font-size: 23px;">Distance:</label><br><br>
+         <input type="number" id="distance">
+         <br><br>
+         Choose Unit: <select style="font-size: 15px" id="unit">
+            <option value="km" selected id="km">Kilometers</option>
+            <option value="m" id="m">Meters</option>
+            <option value="mil" id="mil">Miles</option>
+         </select><br><br>
+         <button type="button" id="btn" onclick="calculate()">Convert</button><br><br>   
+         <br>
+         <p><b>Distance in Kilometers: <span id="result_km"></span></b></p>
+         <p><b>Distance in Meters: <span id="result_m"></span></b></p>
+         <p><b>Distance in Miles: <span id="result_mi"></span></b></p>
+        </div> 
+    </div>
+
+    <footer class="footer">
+        <div align="center">
+            <h5>©2023 Distance Converter. All rights reserved</h5>
+        </div>
+    </footer>
+    <script>
+    function calculate() {
+        let distance = parseFloat(document.getElementById("distance").value);
+        let unit = document.getElementById("unit").value;
+        if (unit === 'km') {
+            document.getElementById("result_km").textContent = distance;
+            document.getElementById("result_m").textContent = distance * 1000;
+            document.getElementById("result_mi").textContent = distance * 0.621;
+        }
+        if (unit === 'm') {
+            document.getElementById("result_km").textContent = distance / 1000;
+            document.getElementById("result_m").textContent = distance;
+            document.getElementById("result_mi").textContent = distance * 0.00062137;
+        }
+        if (unit === 'mil') {
+            document.getElementById("result_km").textContent = distance * 1.6;
+            document.getElementById("result_m").textContent = distance * 1609.34;
+            document.getElementById("result_mi").textContent = distance;
+        }
+    }
+    </script>
+</body>
+</html>
